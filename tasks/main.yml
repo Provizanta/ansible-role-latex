@@ -1,0 +1,24 @@
+---
+
+- name: establish latex
+  become: yes
+  package:
+    name: "{{ package_map[package] | default(package_map['recommended']) }}"
+    state: present
+
+- name: establish extensions
+  become: yes
+  package:
+    name: "texlive-{{ item }}"
+    state: present
+  with_items:
+    - "{{ extensions }}"
+
+- name: establish editors
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ editors }}"
+

@@ -1,0 +1,9 @@
+---
+
+package_map:
+  base: 'texlive-base'
+  recommended: 'texlive-latex-recommended'
+  normal: ''
+  extra: 'texlive-latex-extra'
+  full: 'texlive-full'
+
