@@ -1,9 +1,9 @@
 ---
 
-- name: establish latex
+- name: establish package
   become: yes
   package:
-    name: "{{ package_map[package] | default(package_map['recommended']) }}"
+    name: "{{ package_map[package] }}"
     state: present
 
 - name: establish extensions
@@ -11,14 +11,12 @@
   package:
     name: "texlive-{{ item }}"
     state: present
-  with_items:
-    - "{{ extensions }}"
+  loop: "{{ extensions }}"
 
 - name: establish editors
   become: yes
   package:
     name: "{{ item }}"
     state: present
-  with_items:
-    - "{{ editors }}"
+  loop: "{{ editors }}"
 
