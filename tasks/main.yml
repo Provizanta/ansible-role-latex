@@ -5,18 +5,19 @@
   package:
     name: "{{ package_map[package] }}"
     state: present
+  tags: install
 
 - name: establish extensions
   become: yes
   package:
-    name: "texlive-{{ item }}"
+    name: "{{ extensions | map('regex_replace', '(.*)', 'texlive-\\1') | list }}"
     state: present
-  loop: "{{ extensions }}"
+  tags: install
 
 - name: establish editors
   become: yes
   package:
-    name: "{{ item }}"
+    name: "{{ editors }}"
     state: present
-  loop: "{{ editors }}"
+  tags: install
 
