@@ -1,23 +1,22 @@
 ---
 
 - name: establish package
-  become: yes
+  become: true
   package:
     name: "{{ package_map[package] }}"
     state: present
   tags: install
 
 - name: establish extensions
-  become: yes
+  become: true
   package:
     name: "{{ extensions | map('regex_replace', '(.*)', 'texlive-\\1') | list }}"
     state: present
   tags: install
 
 - name: establish editors
-  become: yes
+  become: true
   package:
     name: "{{ editors }}"
     state: present
   tags: install
-

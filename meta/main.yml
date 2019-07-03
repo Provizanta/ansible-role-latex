@@ -1,0 +1,29 @@
+---
+
+galaxy_info:
+  role_name: latex
+  author: Tibor Csóka
+  description: |
+    "Install LaTeX, its extensions and editors."
+  company: ""
+
+  license: MIT
+
+  min_ansible_version: 2.7.1
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - cosmic
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+
+  galaxy_tags:
+    - latex
+    - tex
+
+dependencies: []

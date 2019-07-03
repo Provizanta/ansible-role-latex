@@ -1,4 +1,4 @@
-Latex
+Ansible role: Latex
 =========
 
 Install LaTeX, LaTeX utilities and editors.
@@ -11,9 +11,13 @@ None
 Role Variables
 --------------
 
-    package: <type of package, one of [base, recommended, normal, extra, full], defaults to 'recommended'>    
-    extensions: <list of latex extensions without the 'latex-' prefix>
-    editors: <list of latex editors to be installed>
+These defaults are set in defaults/main.yml:
+
+    package: 'recommended'    # base|recommended|normal|extra|full
+
+    extensions: []
+
+    editors: []
 
 Dependencies
 ------------
@@ -42,4 +46,4 @@ MIT
 Author Information
 ------------------
 
-Tibor Csoka
+Tibor Csóka

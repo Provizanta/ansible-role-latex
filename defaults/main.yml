@@ -1,6 +1,6 @@
 ---
 
-package: 'recommended'
+package: 'recommended'    # base|recommended|normal|extra|full
 
 extensions: []
 
