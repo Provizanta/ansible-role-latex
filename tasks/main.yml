@@ -1,5 +1,15 @@
 ---
 
+- name: add texlive repo
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_version < '16.10'
+  apt_repository:
+    repo: "ppa:jonathonf/texlive"
+    state: present
+    filename: texlive
+  tags: install
+
 - name: establish package
   become: true
   package:
