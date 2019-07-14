@@ -1,6 +1,8 @@
 Ansible role: Latex
 =========
 
+[![Build Status](https://travis-ci.com/Provizanta/ansible-role-latex.svg?branch=master)](https://travis-ci.com/Provizanta/ansible-role-latex)
+
 Install LaTeX, LaTeX utilities and editors.
 
 Requirements
