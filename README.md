@@ -35,7 +35,7 @@ Example Playbook
           vars:
             package: 'base'
             extensions:
-              - extra-utils
+              - texlive-extra-utils
             editors:
               - texstudio
               - texmaker

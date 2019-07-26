@@ -20,7 +20,7 @@
 - name: establish extensions
   become: true
   package:
-    name: "{{ extensions | map('regex_replace', '(.*)', 'texlive-\\1') | list }}"
+    name: "{{ extensions }}"
     state: present
   tags: install
 
