@@ -4,7 +4,7 @@ galaxy_info:
   role_name: latex
   author: Tibor Csóka
   description: |
-    "Install LaTeX, its extensions and editors."
+    "Install LaTeX, its latex_extensions and latex_editors."
   company: ""
 
   license: MIT

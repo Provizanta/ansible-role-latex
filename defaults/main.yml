@@ -1,7 +1,7 @@
 ---
 
-package: 'recommended'    # base|recommended|normal|extra|full
+latex_package: 'recommended'    # base|recommended|normal|extra|full
 
-extensions: []
+latex_extensions: []
 
-editors: []
+latex_editors: []

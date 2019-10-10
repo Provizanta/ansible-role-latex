@@ -5,8 +5,8 @@
   roles:
     - role: latex
       vars:
-        package: 'base'
-        extensions:
+        latex_package: 'base'
+        latex_extensions:
           - texlive-extra-utils
-        editors:
+        latex_editors:
           - texstudio

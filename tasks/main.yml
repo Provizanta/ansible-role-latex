@@ -1,6 +1,6 @@
 ---
 
-- name: add texlive repo
+- name: establish texlive repo
   when:
     - ansible_distribution == 'Ubuntu'
     - ansible_distribution_version < '16.10'
@@ -13,20 +13,20 @@
 - name: establish package
   become: true
   package:
-    name: "{{ package_map[package] }}"
+    name: "{{ package_map[latex_package] }}"
     state: present
   tags: install
 
-- name: establish extensions
+- name: establish latex_extensions
   become: true
   package:
-    name: "{{ extensions }}"
+    name: "{{ latex_extensions }}"
     state: present
   tags: install
 
-- name: establish editors
+- name: establish latex_editors
   become: true
   package:
-    name: "{{ editors }}"
+    name: "{{ latex_editors }}"
     state: present
   tags: install

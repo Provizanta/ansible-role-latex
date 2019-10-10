@@ -3,7 +3,7 @@ Ansible role: Latex
 
 [![Build Status](https://travis-ci.com/Provizanta/ansible-role-latex.svg?branch=master)](https://travis-ci.com/Provizanta/ansible-role-latex)
 
-Install LaTeX, LaTeX utilities and editors.
+Install LaTeX, LaTeX utilities and latex_editors.
 
 Requirements
 ------------
@@ -13,13 +13,13 @@ None
 Role Variables
 --------------
 
-These defaults are set in defaults/main.yml:
+These variables are defined in [defaults/main.yml](./defaults/main.yml):
 
-    package: 'recommended'    # base|recommended|normal|extra|full
+    latex_package: 'recommended'    # base|recommended|normal|extra|full
 
-    extensions: []
+    latex_extensions: []
 
-    editors: []
+    latex_editors: []
 
 Dependencies
 ------------
@@ -33,10 +33,10 @@ Example Playbook
       roles:
         - role: latex
           vars:
-            package: 'base'
-            extensions:
+            latex_package: 'base'
+            latex_extensions:
               - texlive-extra-utils
-            editors:
+            latex_editors:
               - texstudio
               - texmaker
 
