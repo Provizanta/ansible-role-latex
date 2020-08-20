@@ -8,7 +8,7 @@
       apt:
         update_cache: true
   roles:
-    - role: latex
+    - role: ansible-role-latex
       vars:
         latex_package: 'base'
         latex_extensions:
