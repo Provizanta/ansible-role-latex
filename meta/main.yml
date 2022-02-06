@@ -2,6 +2,7 @@
 
 galaxy_info:
   role_name: latex
+  namespace: provizanta
   author: Tibor Csóka
   description: |
     "Install LaTeX, its latex_extensions and latex_editors."
