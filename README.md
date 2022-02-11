@@ -1,4 +1,4 @@
-Ansible role: Latex
+Ansible role: LaTeX
 =========
 
 ![Build & Deploy](https://github.com/Provizanta/ansible-role-latex/workflows/molecule/badge.svg?branch=master)
