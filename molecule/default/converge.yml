@@ -2,16 +2,9 @@
 
 - name: Converge
   hosts: all
-  pre_tasks:
-    - name: update package manager
-      when: "ansible_pkg_mgr == 'apt'"
-      apt:
-        update_cache: true
   roles:
     - role: ansible-role-latex
       vars:
         latex_package: 'base'
         latex_extensions:
           - texlive-extra-utils
-        latex_editors:
-          - texstudio

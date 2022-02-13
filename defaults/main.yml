@@ -3,5 +3,3 @@
 latex_package: 'recommended'    # base|recommended|normal|extra|full
 
 latex_extensions: []
-
-latex_editors: []
