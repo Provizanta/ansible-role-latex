@@ -3,7 +3,7 @@ Ansible role: LaTeX
 
 ![Build & Deploy](https://github.com/Provizanta/ansible-role-latex/workflows/molecule/badge.svg?branch=master)
 
-Install LaTeX, LaTeX utilities and latex_editors.
+Install LaTeX and LaTeX extensions.
 
 Requirements
 ------------
@@ -19,8 +19,6 @@ These variables are defined in [defaults/main.yml](./defaults/main.yml):
 
     latex_extensions: []
 
-    latex_editors: []
-
 Dependencies
 ------------
 
@@ -29,16 +27,14 @@ None
 Example Playbook
 ----------------
 
-    - hosts: localhost
+    - name: Converge
+      hosts: all
       roles:
         - role: latex
           vars:
             latex_package: 'base'
             latex_extensions:
               - texlive-extra-utils
-            latex_editors:
-              - texstudio
-              - texmaker
 
 License
 -------

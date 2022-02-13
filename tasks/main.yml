@@ -1,5 +1,12 @@
 ---
 
+- name: asserts
+  loop: "{{ latex_extensions }}"
+  assert:
+    that:
+      - item is regex('^texlive.*')
+  tags: always
+
 - name: establish texlive repo
   when:
     - ansible_distribution == 'Ubuntu'
@@ -21,12 +28,5 @@
   become: true
   package:
     name: "{{ latex_extensions }}"
-    state: present
-  tags: install
-
-- name: establish latex_editors
-  become: true
-  package:
-    name: "{{ latex_editors }}"
     state: present
   tags: install
